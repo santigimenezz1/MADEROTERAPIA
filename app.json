@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "FLEXRUN PRO",
+    "slug": "fittpro",
+    "version": "1.0.18",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fittpro.fittpro",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "jsEngine": "hermes",
+      "buildNumber": "58"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.santiagofittlline.fittlline",
+      "permissions": [],
+      "googleServicesFile": "./google-services.json",
+      "jsEngine": "hermes",
+      "versionCode": 12
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "@react-native-firebase/app"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f2cc367d-7b18-4bd3-914d-d795ef0b8a68"
+      }
+    }
+  }
+}
