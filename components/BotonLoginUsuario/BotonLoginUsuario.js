@@ -8,10 +8,11 @@ botonLoginUsuario:{
     display:"flex",
     alignItems:"center",
     justifyContent:"center",
-    backgroundColor: "#34cee6",
+    backgroundColor: "#D4AF37",
 },
 botonText:{
     color:"white",
+    fontWeight:"bold"
 },
 botonRegistroUsuario:{
     width:150,
@@ -20,7 +21,7 @@ botonRegistroUsuario:{
     display:"flex",
     alignItems:"center",
     justifyContent:"center",
-    backgroundColor: "hsl(215, 18%, 13%)",
+    backgroundColor: "#4A4A4A",
 },
 container__botonesRegistro:{
     display:"flex",

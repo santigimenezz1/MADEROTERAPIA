@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, TextInput, Image } from 'react-native';
+import { View, Text, TextInput, ImageBackground, Image } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import styles from './RegistroStyles';
@@ -182,114 +182,113 @@ const Registro = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container__inicioSesion}>
-      <Image
-        width={230}
-        height={85}
-        source={{
-          uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1750757980/Flexrun_pro_1_ab4wmw.png'
-        }}
-      />
+    <ImageBackground
+      source={{ uri:'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755198477/Maderotherapy_xpjkj4.jpg' }}
+      style={{ flex: 1 }}
+      resizeMode="cover"
+    >
+      <View style={styles.container__inicioSesion}>
+        <Image
+          width={230}
+          height={85}
+          source={{
+            uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1750757980/Flexrun_pro_1_ab4wmw.png'
+          }}
+        />
 
-      {isLoading && (
-        <View style={{ marginVertical: 20 }}>
-          <Swing size={48} color="#34cee6" />
-        </View>
-      )}
-
-      <Formik
-        initialValues={{
-          email: '',
-          password: '',
-          repeatPassword: '',
-          tipoUsuario: ''
-        }}
-        validationSchema={RegistroSchema}
-        onSubmit={values => EnviarRegistroUsuario(values)}
-      >
-        {({
-          handleChange,
-          handleBlur,
-          handleSubmit,
-          values,
-          errors,
-          touched,
-          setFieldValue
-        }) => (
-          <View style={styles.container__form}>
-            <TextInput
-              onChangeText={handleChange('email')}
-              onBlur={handleBlur('email')}
-              value={values.email}
-              style={styles.input}
-              placeholderTextColor="white"
-              placeholder={idioma.email}
-            />
-            {touched.email && errors.email && (
-              <Text style={{ color: 'red' }}>{errors.email}</Text>
-            )}
-
-            <TextInput
-              onChangeText={handleChange('password')}
-              onBlur={handleBlur('password')}
-              value={values.password}
-              style={styles.input}
-              placeholderTextColor="white"
-              placeholder={idioma.password}
-              secureTextEntry
-            />
-            {touched.password && errors.password && (
-              <Text style={{ color: 'red' }}>{errors.password}</Text>
-            )}
-
-            <TextInput
-              onChangeText={handleChange('repeatPassword')}
-              onBlur={handleBlur('repeatPassword')}
-              value={values.repeatPassword}
-              style={styles.input}
-              placeholderTextColor="white"
-              placeholder={idioma.repeatPassword}
-              secureTextEntry
-            />
-            {touched.repeatPassword && errors.repeatPassword && (
-              <Text style={{ color: 'red' }}>{errors.repeatPassword}</Text>
-            )}
-
-            <View style={styles.pickerContainer}>
-              <Picker
-                selectedValue={values.tipoUsuario}
-                onValueChange={(itemValue) => {
-                  setFieldValue('tipoUsuario', itemValue);
-                }}
-                dropdownIconColor="white"
-                style={styles.picker}
-              >
-                <Picker.Item label={idioma.selectLanguage} value="" />
-                <Picker.Item label="Español (España)" value="espana" />
-                <Picker.Item label="Français (France)" value="francia" />
-                <Picker.Item label="Deutsch (Deutschland)" value="bandera" />
-                <Picker.Item label="Italiano (Italia)" value="italia" />
-                <Picker.Item label="Nederlands (Nederland)" value="paisesBajos" />
-                <Picker.Item label="English (United States)" value="inglaterra" />
-                <Picker.Item label="Português (Portugal)" value="portugal" />
-                <Picker.Item label="United States (USA)" value="estadosUnidos" />
-              </Picker>
-            </View>
-            {touched.tipoUsuario && errors.tipoUsuario && (
-              <Text style={{ color: 'red' }}>{errors.tipoUsuario}</Text>
-            )}
-
-            <TouchableOpacity
-              onPress={handleSubmit}
-              style={styles.botonLoginUsuario}
-              disabled={isLoading}
-            >
-              <Text style={styles.botonText}>{idioma.registrar}</Text>
-            </TouchableOpacity>
+        {isLoading && (
+          <View style={{ marginVertical: 20 }}>
+            <Swing size={48} color="#34cee6" />
           </View>
         )}
-      </Formik>
-    </View>
+
+        <Formik
+          initialValues={{
+            email: '',
+            password: '',
+            repeatPassword: '',
+            tipoUsuario: ''
+          }}
+          validationSchema={RegistroSchema}
+          onSubmit={values => EnviarRegistroUsuario(values)}
+        >
+          {({
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            values,
+            errors,
+            touched,
+            setFieldValue
+          }) => (
+            <View style={styles.container__form}>
+              <TextInput
+                onChangeText={handleChange('email')}
+                onBlur={handleBlur('email')}
+                value={values.email}
+                style={styles.input}
+                placeholderTextColor="white"
+                placeholder={idioma.email}
+              />
+              {touched.email && errors.email && (
+                <Text style={{ color: 'red' }}>{errors.email}</Text>
+              )}
+
+              <TextInput
+                onChangeText={handleChange('password')}
+                onBlur={handleBlur('password')}
+                value={values.password}
+                style={styles.input}
+                placeholderTextColor="white"
+                placeholder={idioma.password}
+                secureTextEntry
+              />
+              {touched.password && errors.password && (
+                <Text style={{ color: 'red' }}>{errors.password}</Text>
+              )}
+
+              <TextInput
+                onChangeText={handleChange('repeatPassword')}
+                onBlur={handleBlur('repeatPassword')}
+                value={values.repeatPassword}
+                style={styles.input}
+                placeholderTextColor="white"
+                placeholder={idioma.repeatPassword}
+                secureTextEntry
+              />
+              {touched.repeatPassword && errors.repeatPassword && (
+                <Text style={{ color: 'red' }}>{errors.repeatPassword}</Text>
+              )}
+
+              <View style={styles.pickerContainer}>
+                <Picker
+                  selectedValue={values.tipoUsuario}
+                  onValueChange={(itemValue) => {
+                    setFieldValue('tipoUsuario', itemValue);
+                  }}
+                  dropdownIconColor="white"
+                  style={styles.picker}
+                >
+                  <Picker.Item label={idioma.selectLanguage} value="" />
+                  <Picker.Item label="Español (España)" value="espana" />
+                  <Picker.Item label="Français (France)" value="francia" />
+                  <Picker.Item label="Deutsch (Deutschland)" value="bandera" />
+                  <Picker.Item label="Italiano (Italia)" value="italia" />
+                  <Picker.Item label="Nederlands (Pays-Bas)" value="paisesBajos" />
+                  <Picker.Item label="Português (Portugal)" value="portugal" />
+                  <Picker.Item label="English (UK)" value="inglaterra" />
+                  <Picker.Item label="English (USA)" value="estadosUnidos" />
+                </Picker>
+              </View>
+
+              <TouchableOpacity onPress={handleSubmit} style={styles.button}>
+                <Text style={styles.buttonText}>{idioma.registrar}</Text>
+              </TouchableOpacity>
+            </View>
+          )}
+        </Formik>
+      </View>
+    </ImageBackground>
   );
 };
 
