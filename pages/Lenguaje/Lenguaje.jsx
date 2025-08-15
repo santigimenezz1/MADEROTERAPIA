@@ -123,7 +123,7 @@ const Perfil = () => {
 
 return (
   <ImageBackground
-    source={{ uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1754508619/Dise%C3%B1o_sin_t%C3%ADtulo_40_x7dgir.png' }}
+    source={{ uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755259508/Lymphatic_Drainage_Is_the_At-Home_Stimulating_Massage_You_Can_t_Pass_Up_z9a8at.jpg' }}
     style={{ flex: 1 }}
     imageStyle={{ opacity: 1 }}
   >

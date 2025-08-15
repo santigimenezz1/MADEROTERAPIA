@@ -1,13 +1,17 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container__inicioSesion: {
-    backgroundColor: "black",
+  backgroundImage: {
+    flex: 1,
     width: "100%",
     height: "100%",
-    display: "flex",
+  },
+  overlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.6)", // oscurece para mejorar contraste
     justifyContent: "center",
     alignItems: "center",
+    paddingHorizontal: 20,
   },
   input: {
     width: 300,
@@ -15,7 +19,7 @@ const styles = StyleSheet.create({
     color: "white",
     padding: 5,
     borderRadius: 12,
-    backgroundColor: "hsl(215, 18%, 13%)",
+    backgroundColor: "#4A4A4A",
     paddingLeft: 10,
     fontFamily: 'NunitoSans_400Regular',
     letterSpacing: 1,
@@ -53,9 +57,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 30,
   },
-  // ⬇️ Estilos nuevos para el Picker
   pickerContainer: {
-    backgroundColor: "#34cee6",
+    backgroundColor: "#D4AF37",
     borderRadius: 12,
     width: 300,
     overflow: "hidden",
@@ -67,6 +70,18 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     paddingLeft: 10,
   },
+  button: {
+    marginTop: 20,
+    backgroundColor: "#D4AF37",
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 12,
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
+    letterSpacing: 1,
+  }
 });
 
 export default styles;

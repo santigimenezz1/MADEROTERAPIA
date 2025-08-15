@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Image, Pressable, ScrollView, Text, View, Alert } from "react-native";
+import { Image, Pressable, ScrollView, Text, View, Alert, ImageBackground } from "react-native";
 import NavBar from "../../components/NavBar/NavBar";
 import TarjetaCalentamiento from "../../components/TarjetaCalentamiento/TarjetaCalentamiento";
 import TarjetaNivel from "../../components/TarjetaNivel/TarjetaNivel.jsx";
@@ -74,12 +74,12 @@ const Home = ({ navigation }) => {
   if (loading) {
     return (
       <View style={{ height: "100%", width: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Swing size={48} color="hsl(199, 76%, 28%)" />
+        <Swing size={48} color="#D4AF37" />
       </View>
     );
   }
 
-  const ordenPersonalizado = ["Calentamiento", "Conos sin pelota", "Conos con pelota", "Escalera", "Mixtos"];
+  const ordenPersonalizado = ["Introducción", "MODULO 1 - Qué es la maderoterapia", "MODULO 2 - CELULITIS", "MODULO 3 - Protocolo vientre", "Modulo 4 - protocolo parte trasera"];
 
   const nivelesOrdenados = niveles
     .filter((nivel) => ordenPersonalizado.includes(nivel.data.nombre))
@@ -115,40 +115,45 @@ const Home = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.home}>
-      <NavBar />
-      <ScrollView style={styles.home__main} contentContainerStyle={styles.home__contentContainer}>
-        {!closed && (
-          <>
-            <TarjetaIngresoCodigo setModalVisible={setModalVisible} CerrarModal={CerrarModal} setCodigoCorrecto={setCodigoCorrecto} />
-            {codigoCorrecto && (
-              <Text style={{ color: "red", paddingLeft: 20 }}>
-                {traduccionesErrorCodigo[idiomaActual]}
-              </Text>
-            )}
-          </>
-        )}
+    <ImageBackground
+      source={{ uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755201169/Maderotherapy_Massage_tsneis.jpg' }}
+      style={styles.backgroundImage}
+      resizeMode="cover"
+    >
+       {/* Capa negra encima para oscurecer el fondo */}
+          <View style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.63)' }} />
+      <View style={styles.home}>
+        <NavBar />
+        <ScrollView style={styles.home__main} contentContainerStyle={styles.home__contentContainer}>
+          {!closed && (
+            <>
+              <TarjetaIngresoCodigo setModalVisible={setModalVisible} CerrarModal={CerrarModal} setCodigoCorrecto={setCodigoCorrecto} />
+              {codigoCorrecto && (
+                <Text style={{ color: "red", paddingLeft: 20 }}>
+                  {traduccionesErrorCodigo[idiomaActual]}
+                </Text>
+              )}
+            </>
+          )}
 
-        <Text style={styles.home__sectionTitle}>
-          <FontAwesome5 name="play" size={18} color="white" />{" "}
-          {traduccionesTitulo[idiomaActual]}
-        </Text>
+         
 
-        {nivelesOrdenados.map((nivel) => (
-          <TarjetaNivel
-            key={nivel.id}
-            data={nivel}
-            navigation={navigation}
-            nivel={nivel.data}
-            tiempo={nivel.data.tiempoTotal}
-          />
-        ))}
+          {nivelesOrdenados.map((nivel) => (
+            <TarjetaNivel
+              key={nivel.id}
+              data={nivel}
+              navigation={navigation}
+              nivel={nivel.data}
+              tiempo={nivel.data.tiempoTotal}
+            />
+          ))}
 
-        <View style={styles.home__tipsContainer}>
-          <TarjetaConsejos />
-        </View>
-      </ScrollView>
-    </View>
+          <View style={styles.home__tipsContainer}>
+            <TarjetaConsejos />
+          </View>
+        </ScrollView>
+      </View>
+    </ImageBackground>
   );
 };
 

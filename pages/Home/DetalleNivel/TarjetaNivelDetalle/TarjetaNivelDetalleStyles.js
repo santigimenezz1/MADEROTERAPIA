@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   padding: 14,
   paddingLeft: 20,
   borderRadius: 10,
- backgroundColor: "rgba(17, 212, 212, 0.73)", // el último valor (0.5) es la opacidad
+ backgroundColor: "#4a4a4ac4", // el último valor (0.5) es la opacidad
   height: RFValue(85),
   display: "flex",
   flexDirection: "row",

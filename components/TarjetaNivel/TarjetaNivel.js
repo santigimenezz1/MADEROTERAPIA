@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
     fontSize: RFValue(24),
     fontFamily: "NunitoSans_400Regular",
     textAlign: "center",
+    fontWeight:"bold"
+
   },
   centroTexto: {
     justifyContent: "center",
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 10,
     right: 10,
-    backgroundColor: "#34cee6",
+    backgroundColor: "#D4AF37",
     paddingVertical: 4,
     paddingHorizontal: 8,
     borderRadius: 6,

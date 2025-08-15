@@ -53,6 +53,8 @@ const TarjetaNivel = ({ data, nivel, tiempo, navigation }) => {
       style={styles.fondoImagen}
       imageStyle={{ borderRadius: 12 }}
     >
+                <View style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.1)' }} />
+      
       {/* Capa oscura */}
       <View style={styles.overlay} />
 

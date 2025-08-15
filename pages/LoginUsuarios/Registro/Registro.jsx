@@ -35,7 +35,6 @@ const Registro = ({ navigation }) => {
   const [imagen, setImagen] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Traducciones por idioma
   const textos = {
     espana: {
       email: 'Correo electrónico',
@@ -183,18 +182,12 @@ const Registro = ({ navigation }) => {
 
   return (
     <ImageBackground
-      source={{ uri:'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755198477/Maderotherapy_xpjkj4.jpg' }}
-      style={{ flex: 1 }}
+      source={{ uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755258768/Come_ridefinire_il_corpo_e_rilassarlo_profondamente_con_la_legnoterapia_ejyriy.jpg' }}
+      style={styles.backgroundImage}
       resizeMode="cover"
     >
-      <View style={styles.container__inicioSesion}>
-        <Image
-          width={230}
-          height={85}
-          source={{
-            uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1750757980/Flexrun_pro_1_ab4wmw.png'
-          }}
-        />
+      <View style={styles.overlay}>
+    
 
         {isLoading && (
           <View style={{ marginVertical: 20 }}>

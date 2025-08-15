@@ -37,7 +37,7 @@ function MyTabs() {
           borderTopColor: 'black',
           borderTopWidth: 4,
           paddingBottom: 20,
-          borderColor: '#34cee6',
+          borderColor: '#D4AF37',
         },
         tabBarLabel: ({ focused }) => {
           let label = '';
@@ -74,7 +74,7 @@ function MyTabs() {
 
           return (
             <Text style={{
-              color: focused ? '#34cee6' : 'white',
+              color: focused ? '#D4AF37' : 'white',
               fontSize: RFValue(13),
               fontFamily: 'Roboto_400Regular',
               letterSpacing: 1,
@@ -92,7 +92,7 @@ function MyTabs() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-<AntDesign name="playcircleo" size={24} color={focused ? '#34cee6' : 'white'} />
+<AntDesign name="playcircleo" size={24} color={focused ? '#D4AF37' : 'white'} />
             </View>
           ),
         }}
@@ -118,7 +118,7 @@ function MyTabs() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-              <AntDesign name="user" size={24} color={focused ? '#34cee6' : 'white'} />
+              <AntDesign name="user" size={24} color={focused ? '#D4AF37' : 'white'} />
             </View>
           ),
         }}

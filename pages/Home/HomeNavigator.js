@@ -17,7 +17,7 @@ const HomeNavigator = () => {
     
     <Stack.Navigator screenOptions={{
           headerStyle: {
-            backgroundColor: "#34cee6",
+            backgroundColor: "#D4AF37",
           height:RFValue(110),
         },
         headerShadowVisible: false, // Esta propiedad elimina el borde inferior

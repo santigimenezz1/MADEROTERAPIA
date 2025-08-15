@@ -67,7 +67,7 @@ const DetalleNivelVideo = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
         source={{
-          uri: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1751020771/Dise%C3%B1o_sin_t%C3%ADtulo_68_dhzq2k.png",
+          uri: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755205783/Maderoth%C3%A9rapie_btr1q8.jpg",
         }}
         style={{ flex: 1, opacity:1 }}
         resizeMode="cover"

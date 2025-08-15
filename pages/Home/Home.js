@@ -2,10 +2,15 @@ import { StyleSheet } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+  },
   home: {
     display: "flex",
     alignItems: "center",
-    backgroundColor: "black",
+    backgroundColor: "transparent", // antes "black" para que se vea el fondo
     position: "relative",
     height: "100%",
   },
@@ -14,7 +19,7 @@ const styles = StyleSheet.create({
     height: "100%",
     padding: 5,
     flexDirection: "column",
-    marginTop: 10,
+  
   },
   home__contentContainer: {
     paddingBottom: 60,
@@ -32,9 +37,7 @@ const styles = StyleSheet.create({
     fontSize: RFValue(20),
     color: "white",
     fontFamily: 'NunitoSans_400Regular',
-    marginTop: 30,
     display:"flex",
-    
   },
   home__tipsContainer: {
     marginTop: 30,
@@ -45,7 +48,6 @@ const styles = StyleSheet.create({
   home__textCode: {
     color: "white",
     fontSize:15,
-
   },
 });
 

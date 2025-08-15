@@ -164,7 +164,7 @@ const Perfil = () => {
 
   return (
   <ImageBackground
-    source={{ uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1751020771/Dise%C3%B1o_sin_t%C3%ADtulo_68_dhzq2k.png' }}
+    source={{ uri: 'https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755198477/Maderotherapy_xpjkj4.jpg' }}
     style={{ flex: 1 }}
     imageStyle={{ opacity: 1 }}
   >

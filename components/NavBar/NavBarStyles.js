@@ -14,11 +14,9 @@ const styles = StyleSheet.create({
     container__navBar__titulo:{
      display:"flex",
      flexDirection:"row",
-     width:"50%",
-     gap:10,
+     width:"100%",
      alignItems:"center",
-    
-   
+     justifyContent:"center"
     },
     container__navBar__titulo__text:{
         color:"white",
