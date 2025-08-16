@@ -78,7 +78,7 @@ const DetalleNivelVideo = () => {
             <View style={{ flex: 1, alignItems: "center", justifyContent:"center", paddingBottom: RFValue(50), borderWidth:8, borderTopWidth:0,borderBottomWidth:0, borderColor:"#34cee6"  }}>
               <Text
                 style={{
-                  color: "white",
+                  color: "#D4AF37",
                   letterSpacing: 2,
                   fontSize: 70,
                 }}

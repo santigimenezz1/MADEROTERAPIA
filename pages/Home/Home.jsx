@@ -136,8 +136,6 @@ const Home = ({ navigation }) => {
             </>
           )}
 
-         
-
           {nivelesOrdenados.map((nivel) => (
             <TarjetaNivel
               key={nivel.id}
@@ -148,9 +146,7 @@ const Home = ({ navigation }) => {
             />
           ))}
 
-          <View style={styles.home__tipsContainer}>
-            <TarjetaConsejos />
-          </View>
+     
         </ScrollView>
       </View>
     </ImageBackground>

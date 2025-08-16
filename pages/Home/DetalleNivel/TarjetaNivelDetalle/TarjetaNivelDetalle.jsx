@@ -45,7 +45,7 @@ const TarjetaNivelDetalle = ({ setModalVisible, nivel, tiempo, navigation, ejerc
                 }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ marginRight: 10 }}>
-                            <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'white' }}>{numero}</Text>
+                            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#D4AF37' }}>{numero}</Text>
                         </View>
                         <View style={{ width: RFValue(150) }}>
                             <Text style={styles.text}>{obtenerNombreEjercicio()}</Text>
@@ -56,12 +56,7 @@ const TarjetaNivelDetalle = ({ setModalVisible, nivel, tiempo, navigation, ejerc
 
                     {closed ? (
                         <View style={{ flexDirection: 'row', gap: 3 }}>
-                            {ejercicio.estrellas.completas.map((_, i) => (
-                                <FontAwesome key={`star-full-${i}`} name="star" size={26} color="white" />
-                            ))}
-                            {ejercicio.estrellas.vacias.map((_, i) => (
-                                <FontAwesome key={`star-empty-${i}`} name="star-o" size={26} color="white" />
-                            ))}
+                           
                         </View>
                         
                     ) : (

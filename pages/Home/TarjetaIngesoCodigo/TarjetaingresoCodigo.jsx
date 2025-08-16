@@ -87,10 +87,10 @@ const TarjetaIngresoCodigo = ({
   return (
     <View style={styles.container}>
       <Image
-        width={25}
-        height={25}
+        width={35}
+        height={35}
         source={{
-          uri: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1720478069/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/cerrar_qrawqr.png",
+          uri: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1755341433/cerrar-con-llave_h44wxu.png",
         }}
       />
 

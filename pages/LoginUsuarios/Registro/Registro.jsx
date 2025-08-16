@@ -191,7 +191,7 @@ const Registro = ({ navigation }) => {
 
         {isLoading && (
           <View style={{ marginVertical: 20 }}>
-            <Swing size={48} color="#34cee6" />
+            <Swing size={48} color="#D4AF37" />
           </View>
         )}
 

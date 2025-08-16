@@ -194,7 +194,7 @@ const Perfil = () => {
           {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Sair</Text>}
         </Pressable>
 
-        <Pressable onPress={() => handleEliminarCuenta(idiomaActual)} style={{ borderWidth: 1, backgroundColor: "red", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Pressable onPress={() => handleEliminarCuenta(idiomaActual)} style={{ borderWidth: 1, backgroundColor: "#D4AF37", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
           {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminar cuenta</Text>}
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminare account</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Supprimer le compte</Text>}
