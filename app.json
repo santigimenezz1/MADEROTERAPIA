@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FLEXRUN PRO",
-    "slug": "fittpro",
+    "name": "MADEROTERAPIA",
+    "slug": "maderoterapia",
     "version": "1.0.18",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,7 +23,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.santiagofittlline.fittlline",
+      "package": "com.maderoterapia.maderoterapia",
       "permissions": [],
       "googleServicesFile": "./google-services.json",
       "jsEngine": "hermes",
@@ -46,7 +46,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "f2cc367d-7b18-4bd3-914d-d795ef0b8a68"
+        "projectId": "c77d8f43-c18c-4831-841b-430d5fe5340c"
       }
     }
   }
